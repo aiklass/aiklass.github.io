@@ -23,11 +23,16 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 const form = document.getElementById("contactForm")
-form.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    console.log("form submitted");
-})
+const alert = document.querySelector("#success_alert")
 
-function writeEmail(){
-
-}
+form.addEventListener("submit", (e)=> {
+        e.preventDefault();
+        const email = document.getElementById("email_form").value;
+        console.log("form submitted");
+        alert.style.display = "block";
+        setTimeout(()=>{
+            alert.style.display = none;
+        },2000)
+        form.reset();
+    }
+)
