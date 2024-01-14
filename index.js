@@ -31,7 +31,7 @@ form.addEventListener("submit", (e)=> {
         console.log("form submitted");
         alert.style.display = "block";
         setTimeout(()=>{
-            alert.style.display = none;
+            alert.style.display = "none";
         },2000)
         form.reset();
     }
